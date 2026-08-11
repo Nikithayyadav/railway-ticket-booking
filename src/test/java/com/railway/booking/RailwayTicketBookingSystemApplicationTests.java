@@ -8,6 +8,6 @@ class RailwayTicketBookingSystemApplicationTests {
 
     @Test
     void contextLoads() {
-    }
+    } 
 
 }
