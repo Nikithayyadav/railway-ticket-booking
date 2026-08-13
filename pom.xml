@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.railway</groupId> 
     <artifactId>railway-ticket-booking-system</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version> 
     <name>railway-ticket-booking-system</name>
     <description>railway-ticket-booking-system</description>
     <url/>
