@@ -2,11 +2,15 @@ package com.railway.booking.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "bookings")
 public class Booking {
@@ -26,7 +30,7 @@ public class Booking {
     @Column(nullable = false)
     private String trainNumber;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer seatNumber;
 
@@ -36,18 +40,4 @@ public class Booking {
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private LocalDateTime bookingDate;
-
-    public Booking() {
-    }
-
-    @PrePersist
-    public void beforeSave() {
-        if (bookingDate == null) {
-            bookingDate = LocalDateTime.now();
-        }
-
-        if (status == null) {
-            status = BookingStatus.CONFIRMED;
-        }
-    }
 }
