@@ -60,7 +60,7 @@ Handled scenarios include:
 - Invalid ticket number
 - Ticket already cancelled
 
-### Pagination
+### Pagination 
 
 Train search supports pagination using Spring Data JPA.
 
