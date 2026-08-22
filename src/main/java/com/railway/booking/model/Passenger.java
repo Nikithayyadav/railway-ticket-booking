@@ -2,8 +2,15 @@
 
     import jakarta.persistence.*;
     import java.time.LocalDateTime;
+    import lombok.Data;
     import com.fasterxml.jackson.annotation.JsonProperty;
+    import jakarta.validation.constraints.Email;
+    import jakarta.validation.constraints.Min;
+    import jakarta.validation.constraints.NotBlank;
+    import jakarta.validation.constraints.NotNull;
 
+
+    @Data
     @Entity
     @Table(name="passengers")
 
@@ -17,93 +24,34 @@
         @Column(name="passenger_id",unique = true)
         @JsonProperty(access = JsonProperty.Access.READ_ONLY)
         private String passengerId;
-
+        @NotBlank(message="Name is Required")
         private String name;
+
+        @NotNull(message="Age is Required")
+        @Min(value=1,message = "Age cannot be 0")
         private Integer age;
+
+        @NotNull(message = "Gender is Required")
        @Enumerated(EnumType.STRING)
         private Gender gender;
 
+        @NotBlank(message = "Phone is Required")
        private String phone;
+
+        @NotBlank(message = "Email is required")
+        @Email(message = "Invalid Email format")
        private String email;
+
         @JsonProperty(access = JsonProperty.Access.READ_ONLY)
        private boolean active = true;
         @JsonProperty(access = JsonProperty.Access.READ_ONLY)
         private LocalDateTime registeredAt;
 
-        public Long getId() {
-            return id;
-        }
-
-        public void setId(Long id) {
-            this.id = id;
-        }
-
-        public String getEmail() {
-            return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
-        }
 
         public Passenger() {
        }
 
-        public String getPassengerId() {
-            return passengerId;
-        }
 
-        public Integer getAge() {
-            return age;
-        }
-
-        public LocalDateTime getRegisteredAt() {
-            return registeredAt;
-        }
-
-        public void setRegisteredAt(LocalDateTime registeredAt) {
-            this.registeredAt = registeredAt;
-        }
-
-        public boolean isActive() {
-            return active;
-        }
-
-        public void setActive(boolean active) {
-            this.active = active;
-        }
-
-        public String getPhone() {
-            return phone;
-        }
-
-        public void setPhone(String phone) {
-            this.phone = phone;
-        }
-
-        public Gender getGender() {
-            return gender;
-        }
-
-        public void setGender(Gender gender) {
-            this.gender = gender;
-        }
-
-        public void setAge(Integer age) {
-            this.age = age;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public void setPassengerId(String passengerId) {
-            this.passengerId = passengerId;
-        }
 
         public Passenger(String name,
                          Integer age,
