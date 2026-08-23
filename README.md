@@ -230,7 +230,7 @@ spring.jpa.properties.hibernate.format_sql=true
 server.port=8080
 ```
 
-> Replace `YOUR_PASSWORD` with your local MySQL password.
+
 
 ### 4. Run the Application
 
