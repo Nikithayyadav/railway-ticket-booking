@@ -1,4 +1,4 @@
-#  Railway Ticket Booking System                        
+#  Railway Ticket Booking System                         
   
 A backend REST API-based Railway Ticket Booking System developed using Java and Spring Boot. The system manages passengers, trains, ticket bookings, cancellations, seat availability, exception handling, and paginated train search.  
   
