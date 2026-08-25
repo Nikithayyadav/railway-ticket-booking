@@ -6,7 +6,7 @@ A robust backend application for managing railway ticket bookings, built with **
 
 ## ✨ Key Features
 
-- 🚆 **Train Management** — Register and search trains by source and destination.
+- 🚆 **Train Management** — Register and search trains by source and destination. 
 - 👤 **Passenger Management** — Register and manage passenger details with validation.
 - 🎫 **Ticket Booking** — Book tickets with automatic seat allocation.
 - 🪑 **Seat Management** — Tracks total and available seats dynamically.
