@@ -1,5 +1,5 @@
 # 🚆 Railway-Ticket Booking System           
-   
+
 A robust backend application for managing railway ticket bookings, built with **Java 17, Spring Boot, Spring Data JPA, and MySQL**. The system implements real-world booking workflows including seat management, train status validation, waiting-list handling, ticket management, pagination, validation, and centralized exception handling. 
 
 ---
